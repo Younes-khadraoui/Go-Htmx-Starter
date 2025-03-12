@@ -1,0 +1,30 @@
+package views
+
+templ HomePage(name string) {
+	<html>
+		<head>
+			<title>Golang + Echo + HTMX + Alpine.js</title>
+			<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+			<script src="https://unpkg.com/alpinejs@3.x.x" defer></script>
+			<link href="../static/css/output.css" rel="stylesheet"/>
+		</head>
+		<body class="p-10">
+			<div class="text-red-400 text-xl font-bold">
+				Welcome { name } to the 
+				<span class="text-blue-500">Golang + Echo + Templ +  HTMX + Alpine.js</span> Starter Kit
+			</div>
+			<!-- Alpine.js Counter -->
+			<div x-data="{ count: 0 }" class="mt-5">
+				<button @click="count++" class="bg-blue-500 text-white px-4 py-2">Click Me (AlpineJs)</button>
+				<p class="mt-2">You clicked <span x-text="count"></span> times.</p>
+			</div>
+			<!-- HTMX Request -->
+			<div class="mt-5">
+				<button hx-get="/count" hx-trigger="click" hx-target="#htmx-response" class="bg-green-500 text-white px-4 py-2">
+					Get Count (HTMX)
+				</button>
+				<p id="htmx-response">Click the button to fetch count.</p>
+			</div>
+		</body>
+	</html>
+}

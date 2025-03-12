@@ -1,0 +1,8 @@
+# air tmp files
+tmp/
+
+# node modules
+node_modules/
+
+# text files in views
+assets/views/*.txt
