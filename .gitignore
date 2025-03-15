@@ -4,5 +4,9 @@ tmp/
 # node modules
 node_modules/
 
-# text files in views
+# text and go files in views
 assets/views/*.txt
+assets/views/*.go
+
+# tailwind ouput
+assets/static/css/output.css

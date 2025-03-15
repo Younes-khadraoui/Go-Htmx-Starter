@@ -15,12 +15,12 @@ templ HomePage(name string) {
 			</div>
 			<!-- Alpine.js Counter -->
 			<div x-data="{ count: 0 }" class="mt-5">
-				<button @click="count++" class="bg-blue-500 text-white px-4 py-2">Click Me (AlpineJs)</button>
+				<button @click="count++" class="bg-blue-500 text-white px-4 py-2 cursor-pointer">Click Me (AlpineJs)</button>
 				<p class="mt-2">You clicked <span x-text="count"></span> times.</p>
 			</div>
 			<!-- HTMX Request -->
 			<div class="mt-5">
-				<button hx-get="/count" hx-trigger="click" hx-target="#htmx-response" class="bg-green-500 text-white px-4 py-2">
+				<button hx-get="/count" hx-trigger="click" hx-target="#htmx-response" class="bg-green-500 text-white px-4 py-2 cursor-pointer">
 					Get Count (HTMX)
 				</button>
 				<p id="htmx-response">Click the button to fetch count.</p>
